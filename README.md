@@ -41,4 +41,4 @@ From using React for a month, here are my initial thoughts.
   1. abstract your css into a class method. ``` cssStyles: function(){...} ```
 
 # React Native
-  # TBA
+  TODO
