@@ -20,6 +20,6 @@ From using React for a month my initial thoughts.
   3. I like to prefix mixin methods with ```_mxn_```, so in my components I write ```this._mxn_functionName``` and I know it's from a mixin.
   4. 
   
-# CSS in your components.... hmmmm
+# CSS styles in your components
   I still think about this a lot but it's very nice and useful when you're creating dynamic css styles for your components.
   1. abstract your css into a class method. ``` cssStyles: function(){...} ```
