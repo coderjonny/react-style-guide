@@ -19,7 +19,8 @@ From using React for a month, here are my initial thoughts.
       var editPositionState = function () {
         return this.props.stage.position === this.state.editPosition;  // this.props works!
       }.bind(this);
-      // or you can do it the lame way and grab this.props before a function and assign it to a variable.
+      // or you can do it the lame way and grab this.props
+      // before a function and assign it to a variable.
     }
 
     ```
