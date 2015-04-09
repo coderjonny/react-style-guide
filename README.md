@@ -39,5 +39,10 @@ From using React for a month, here are my initial thoughts.
   I still think about this a lot but it's very nice and useful when you're creating dynamic css styles for your components.
   1. abstract your css into a class method. ``` cssStyles: function(){...} ```
 
+## tools
+  1. React dev console chrome extension
+  2. react-rails gem (if you're using rails)
+  3. an editor that supports vertical split screens for managing hiearchy and thinking about data-flow.
+
 # React Native
   - TBA
