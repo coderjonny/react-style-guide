@@ -23,12 +23,11 @@ From using React for a month, here are my initial thoughts.
       // or you can do it the lame way and grab this.props
       // before a function and assign it to a variable.
     }
-
+    
     ```
   
-## Commenting
+## Comments
   1. Write a comment at the top of the file of who the parent is.
-  2. 
   
 ## Mixins
   1. Use more mixins.
