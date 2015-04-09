@@ -22,4 +22,4 @@ From using React for a month my initial thoughts.
   
 # CSS in your components.... hmmmm
   I still think about this a lot but it's very nice and useful when you're creating dynamic css styles for your components.
-  1. abstract your css into a class method. ~~~ cssStyles: function(){...} ~~~
+  1. abstract your css into a class method. ``` cssStyles: function(){...} ```
