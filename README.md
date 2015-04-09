@@ -1,7 +1,7 @@
-# react-style-guide
+# React Style Guide
 A style guide for managing sane react components.
 
-From using React for a month my initial thoughts.
+From using React for a month, here are my initial thoughts.
 
 # Components
   1. Don't get fancy with manipulating child DOM elements. If you see yourself mapping over them, create a Component instead!
@@ -9,6 +9,20 @@ From using React for a month my initial thoughts.
   3. Don't change state in a child component without letting the parent component know.
   4. Deeply nested component.. are really hard and can be confusing at times.
   5. Class methods, should do one thing. (Single Responsibility Principle)
+  6. Learn about .bind(); because you're most likely going to be using a scoped ```this``` in a function inside of a function. 
+    ```javascript
+    
+    render: function(){
+      var editPositionState = function () {
+        return this.props.stage.position === this.state.editPosition;  // this.props is undefined
+      };
+      var editPositionState = function () {
+        return this.props.stage.position === this.state.editPosition;  // this.props works!
+      }.bind(this);
+      // or you can do it the lame way and grab this.props before a function and assign it to a variable.
+    }
+
+    ```
   
 # Commenting
   1. Write a comment at the top of the file of who the parent is.
