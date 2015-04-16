@@ -1,4 +1,4 @@
-# React Style Guide 🌀
+# React Style Guide :recycle:
 A style guide for managing sane react components.
 
 From using React for a month, here are my initial thoughts.
