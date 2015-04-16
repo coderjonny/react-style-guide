@@ -7,6 +7,7 @@ From using React for a month, here are my initial thoughts.
 ## Components
   
   - Don't get fancy with manipulating child DOM elements. Map over them and create child components instead.
+    
     ```javascript
     render: function() {
       var people = this.props.people.map(function (person,position) {
@@ -28,12 +29,13 @@ From using React for a month, here are my initial thoughts.
       )
     }
     ```
+    
   - Once you see duplicated functionality in your components, use a Mixin. DRY.
   - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
   - Class methods, should do one thing. (Single Responsibility Principle)
   - Learn about .bind(); because you're most likely going to be using a scoped ```this``` in a function inside of a function. 
-    ```javascript
-    
+
+    ```javascript    
     render: function(){
       var editPositionState = function () {
         return this.props.stage.position === this.state.editPosition;  // this.props is undefined
@@ -46,6 +48,7 @@ From using React for a month, here are my initial thoughts.
     }
     ```
   - Make sure the ```render``` method is at the end of the file. And use multi-line if a component has more than two properties.
+
       ```javascript
       
       <Component
@@ -56,8 +59,9 @@ From using React for a month, here are my initial thoughts.
       />
       ```
   - Use less state and more ```this.props``` in your render method.
-  - Organization
-    ```
+  - ###Organization
+
+    ```javascript
     React.createClass({
 
         propTypes: {},
@@ -86,10 +90,11 @@ From using React for a month, here are my initial thoughts.
   - I like to prefix mixin methods with ```_mxn_```, so in my components I write ```this._mxn_functionName``` and I know it's from a mixin.
   
 ## CSS styles in your components
-  I still think about this a lot but it's very nice and useful when you're creating dynamic css styles for your components.
-  - abstract your css into a class method for dynamic CSS. 
+  - I still think about this a lot but it's very nice and useful when you're creating dynamic css styles for your components.
+  - abstract your css into a class method for dynamic CSS.
+
     ```javascript
-      cssStyles: function(){...}
+      cssStyles: function(){...},
     ```
 
 ## tools
