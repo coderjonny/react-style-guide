@@ -3,9 +3,9 @@ A style guide for managing sane react components.
 
 # React.js
 ## Components
-  
+
   - Don't get fancy with manipulating child DOM elements. Map over them and create child components instead.
-    
+
     ```javascript
     render: function() {
       var people = this.props.people.map(function (person,position) {
@@ -19,7 +19,7 @@ A style guide for managing sane react components.
           );
         }
       }, this);
-  
+
       return (
         <ul>
           {people}
@@ -27,13 +27,13 @@ A style guide for managing sane react components.
       )
     }
     ```
-    
+
   - Once you see duplicated functionality in your components, use a Mixin. DRY.
   - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
   - Class methods, should do one thing. (Single Responsibility Principle)
-  - Learn about .bind(); because you're most likely going to be using a scoped ```this``` in a function inside of a function. 
+  - Learn about .bind(); because you're most likely going to be using a scoped ```this``` in a function inside of a function.
 
-    ```javascript    
+    ```javascript
     render: function(){
       var editPositionState = function () {
         return this.props.stage.position === this.state.editPosition;  // this.props is undefined
@@ -45,10 +45,19 @@ A style guide for managing sane react components.
       // before a function and assign it to a variable.
     }
     ```
+    - or if your using a ES6 transpiler like [Babeljs](https://babeljs.io/) use [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to keep the correct context.
+    ```javascript
+    render: function(){
+      var editPositionState = () => {
+        return this.props.stage.position === this.state.editPosition;  // this.props works!
+      }
+    }
+    ```
+
   - Make sure the ```render``` method is at the end of the file. And use multi-line if a component has more than two properties.
 
       ```javascript
-      
+
       <Component
         propertyOne={...}
         propertyTwo={...}
@@ -79,14 +88,14 @@ A style guide for managing sane react components.
 
     })
     ```
-  
+
 ## Comments
   - Write a comment at the top of the file of who the parent is for the component.
-  
+
 ## Mixins
   - Use more mixins.
   - I like to prefix mixin methods with ```_mxn_```, so in my components I write ```this._mxn_functionName``` and I know it's from a mixin.
-  
+
 ## CSS styles in your components
   - I still think about this a lot but it's very nice and useful when you're creating dynamic css styles for your components.
   - abstract your css into a class method for dynamic CSS.
@@ -94,7 +103,7 @@ A style guide for managing sane react components.
     ```javascript
       cssStyles: function(){...},
     ```
-    
+
 ## Testing
   - Jest best practices...
 
