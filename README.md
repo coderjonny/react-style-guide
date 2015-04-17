@@ -36,10 +36,12 @@ A style guide for managing sane react components.
     ```javascript
     render: function(){
       var editPositionState = function () {
-        return this.props.stage.position === this.state.editPosition;  // this.props is undefined
+        // this.props is undefined
+        return this.props.stage.position === this.state.editPosition;  
       };
       var editPositionState = function () {
-        return this.props.stage.position === this.state.editPosition;  // this.props works!
+        // this.props works!
+        return this.props.stage.position === this.state.editPosition;
       }.bind(this);
       // or you can do it the lame way and grab this.props
       // before a function and assign it to a variable.
@@ -49,7 +51,8 @@ A style guide for managing sane react components.
     ```javascript
     render: function(){
       var editPositionState = () => {
-        return this.props.stage.position === this.state.editPosition;  // this.props works!
+        // this.props works!
+        return this.props.stage.position === this.state.editPosition;
       }
     }
     ```
