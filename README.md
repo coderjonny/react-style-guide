@@ -103,11 +103,20 @@ A style guide for managing sane react components.
   - I like to prefix mixin methods with ```_mxn_```, so in my components I write ```this._mxn_functionName``` and I know it's from a mixin.
 
 ## CSS styles in your components
-  - I still think about this a lot but it's very nice and useful when you're creating dynamic css styles for your components.
-  - abstract your css into a class method for dynamic CSS.
-
+  - Useful when you're creating dynamic css styles for your components and it can be fun!
+  - CSS should be unique for a component. 
+  - Abstract your css into a class method if it's dynamic CSS. 
+  - Throw in that class method of all your inline styles defined into ```style={...}```
     ```javascript
       cssStyles: function(){...},
+      
+      render: function(){
+        return (
+          <div style={cssStyles()}
+            css styles created in JS!
+          </div>
+        )
+      }
     ```
 
 ## Testing
