@@ -94,6 +94,7 @@ A style guide for managing sane react components.
     ```javascript
       cssStyles: function(){...},
     ```
+    
 ## Testing
   - Jest best practices...
 
