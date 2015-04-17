@@ -96,7 +96,7 @@ A style guide for managing sane react components.
     ```
 
   - Comments
-    - Write a comment at the top of the file of who the parent is for the component.
+    - Write a comment at the top of the component if the component belongs to a parent.
 
 ## Mixins
   - Use more mixins.
