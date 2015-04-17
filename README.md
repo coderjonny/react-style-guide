@@ -94,6 +94,8 @@ A style guide for managing sane react components.
     ```javascript
       cssStyles: function(){...},
     ```
+## Testing
+  - Jest best practices...
 
 ## tools
   - React dev console chrome extension
