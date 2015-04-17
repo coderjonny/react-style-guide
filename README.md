@@ -112,7 +112,7 @@ A style guide for managing sane react components.
       
       render: function(){
         return (
-          <div style={cssStyles()}
+          <div style={this.cssStyles()}
             css styles created in JS!
           </div>
         )
