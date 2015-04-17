@@ -28,7 +28,6 @@ A style guide for managing sane react components.
     }
     ```
 
-  - Once you see duplicated functionality in your components, use a Mixin. DRY.
   - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
   - Class methods, should do one thing. (Single Responsibility Principle)
   - Learn about .bind(); because you're most likely going to be using a scoped ```this``` in a function inside of a function.
@@ -100,6 +99,7 @@ A style guide for managing sane react components.
 
 ## Mixins
   - Use more mixins.
+  - Once you see duplicated functionality in your components, use a Mixin. DRY.
   - I like to prefix mixin methods with ```_mxn_```, so in my components I write ```this._mxn_functionName``` and I know it's from a mixin.
 
 ## CSS styles in your components
