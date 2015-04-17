@@ -72,7 +72,10 @@ A style guide for managing sane react components.
   - ###Organization
 
     ```javascript
-    React.createClass({
+    
+    //<PeopleList> --> <Person>
+    
+    var Person = React.createClass({
 
         propTypes: {},
         mixins: [],
@@ -92,8 +95,8 @@ A style guide for managing sane react components.
     })
     ```
 
-## Comments
-  - Write a comment at the top of the file of who the parent is for the component.
+  - Comments
+    - Write a comment at the top of the file of who the parent is for the component.
 
 ## Mixins
   - Use more mixins.
