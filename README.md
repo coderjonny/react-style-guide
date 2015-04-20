@@ -122,7 +122,7 @@ A style guide for managing sane react components.
 ## Testing
   - Jest best practices...
 
-## tools
+## Tools
   - React dev console chrome extension
   - react-rails gem (if you're using rails)
   - an editor that supports vertical split screens for managing hiearchy and thinking about one-way data flow.
