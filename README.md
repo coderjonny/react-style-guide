@@ -63,6 +63,7 @@ A style guide for managing sane react components.
     }
     ```
 
+
   - Use multi-line jsx if a component has more than two properties.
 
       ```javascript
