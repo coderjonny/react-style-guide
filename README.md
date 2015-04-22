@@ -125,7 +125,6 @@ A style guide for managing sane react components.
 
 
 ## Mixins
-  - Use more mixins.
   - Once you see duplicated functionality in your components, use a Mixin. DRY.
   - I like to prefix mixin methods with ```_mxn_```, so in my components I write ```this._mxn_functionName``` and I know it's from a mixin.
 
