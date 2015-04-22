@@ -31,7 +31,7 @@ A style guide for managing sane react components.
     })
     ```
   - ###Comments
-    - Write a comment at the top of the component if the component belongs to a parent component.
+    - Write a comment at the top of the component class if the component belongs to a parent component, especially if the parent component is passing in ```props```.
 
   - ###Methods
   - Class instance methods should do one thing. (Single Responsibility Principle)
