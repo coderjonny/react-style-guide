@@ -33,6 +33,7 @@ A style guide for managing sane react components.
   - ###Methods
   - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
   - Class methods, should do one thing. (Single Responsibility Principle)
+  - Use less state and more ```this.props``` in your render method.
   - Don't get fancy with manipulating child DOM elements. Map over them and create child components instead.
     - *Good*
       ```javascript
@@ -117,7 +118,6 @@ A style guide for managing sane react components.
         …
       />
       ```
-  - Use less state and more ```this.props``` in your render method.
 
 ## Mixins
   - Use more mixins.
