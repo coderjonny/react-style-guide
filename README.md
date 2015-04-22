@@ -28,7 +28,7 @@ A style guide for managing sane react components.
     })
     ```
   - ###Comments
-    - Write a comment at the top of the component if the component belongs to a parent.
+    - Write a comment at the top of the component if the component belongs to a parent component.
 
   - ###Methods
   - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
