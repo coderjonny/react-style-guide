@@ -5,28 +5,51 @@ A style guide for managing sane react components.
 ## Components
 
   - Don't get fancy with manipulating child DOM elements. Map over them and create child components instead.
+    - *Good*
+      ```javascript
+      render: function() {
+        var people = this.props.people.map(function (person) {
+          if (person){
+            return (
+              <Person
+                person = {person}
+                handleUpdate = {this.handleUpdate}
+                key = {person.id}/>
+            );
+          }
+        }, this);
+  
+        return (
+          <ul>
+            {people}
+          </ul>
+        )
+      }
+      ```
 
-    ```javascript
-    render: function() {
-      var people = this.props.people.map(function (person,position) {
-        if (person){
-          return (
-            <Person
-              person = {person}
-              handleUpdate = {this.handleUpdate}
-              style = {this.stageStyles(position)}
-              key = {person.id}/>
-          );
-        }
-      }, this);
-
-      return (
-        <ul>
-          {people}
-        </ul>
-      )
-    }
-    ```
+    - *Better*
+      ```javascript
+      render: function() {
+  
+        return (
+          <ul>
+            {
+              this.props.people.map(function (person) {
+                if (person){
+                  return (
+                    <Person
+                      person = {person}
+                      handleUpdate = {this.handleUpdate}
+                      key = {person.id}/>
+                  );
+                }
+              }, this);
+            }
+          </ul>
+        )
+      }
+      ```
+      - If it's a simple iteration over an array, do render out each of the elements in an array inside jsx.
 
   - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
   - Class methods, should do one thing. (Single Responsibility Principle)
@@ -56,7 +79,7 @@ A style guide for managing sane react components.
     }
     ```
 
-  - Make sure the ```render``` method is at the end of the file. And use multi-line if a component has more than two properties.
+  - Use multi-line jsx if a component has more than two properties.
 
       ```javascript
 
