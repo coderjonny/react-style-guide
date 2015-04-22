@@ -23,6 +23,7 @@ A style guide for managing sane react components.
         componentWillUnmount: function() {},
 
         someMethod: function() {},
+        someOtherInstanceMethod: function() {},
         dynamicCss: function() {},
 
         render : function() {}
@@ -33,10 +34,10 @@ A style guide for managing sane react components.
     - Write a comment at the top of the component if the component belongs to a parent component.
 
   - ###Methods
+  - Class instance methods should do one thing. (Single Responsibility Principle)
   - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
-  - Class methods should do one thing. (Single Responsibility Principle)
   - Use less state and more ```this.props``` in your render method.
-  - Learn about .bind(); because you're most likely going to be using a scoped ```this``` in a function inside of a function.
+  - Learn about ```.bind();``` because you're most likely going to be using a scoped ```this``` in a function inside of a function.
 
     ```javascript
     render: function(){
