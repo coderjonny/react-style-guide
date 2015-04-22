@@ -3,7 +3,36 @@ A style guide for managing sane react components.
 
 # React.js
 ## Components
+  - ###Organization
+    ```javascript
+    
+    //<PeopleList> --> <Person>
+    
+    var Person = React.createClass({
 
+        propTypes: {},
+        mixins: [],
+
+        getInitialState: function() {},
+        getDefaultProps: function() {},
+
+        componentWillMount: function() {},
+        componentWillReceiveProps: function() {},
+        componentWillUnmount: function() {},
+
+        someMethod: function() {},
+        dynamicCss: function() {},
+
+        render : function() {}
+
+    })
+    ```
+  - ###Comments
+    - Write a comment at the top of the component if the component belongs to a parent.
+
+  - ###Methods
+  - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
+  - Class methods, should do one thing. (Single Responsibility Principle)
   - Don't get fancy with manipulating child DOM elements. Map over them and create child components instead.
     - *Good*
       ```javascript
@@ -49,10 +78,8 @@ A style guide for managing sane react components.
         )
       }
       ```
-      - If it's a simple iteration over an array, do render out each of the elements in an array inside jsx.
+      - If it's a simple iteration over an array, render out each of the elements in an array inside jsx.
 
-  - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
-  - Class methods, should do one thing. (Single Responsibility Principle)
   - Learn about .bind(); because you're most likely going to be using a scoped ```this``` in a function inside of a function.
 
     ```javascript
@@ -91,34 +118,6 @@ A style guide for managing sane react components.
       />
       ```
   - Use less state and more ```this.props``` in your render method.
-  - ###Organization
-
-    ```javascript
-    
-    //<PeopleList> --> <Person>
-    
-    var Person = React.createClass({
-
-        propTypes: {},
-        mixins: [],
-
-        getInitialState: function() {},
-        getDefaultProps: function() {},
-
-        componentWillMount: function() {},
-        componentWillReceiveProps: function() {},
-        componentWillUnmount: function() {},
-
-        someMethod: function() {},
-        dynamicCss: function() {},
-
-        render : function() {}
-
-    })
-    ```
-
-  - Comments
-    - Write a comment at the top of the component if the component belongs to a parent.
 
 ## Mixins
   - Use more mixins.
