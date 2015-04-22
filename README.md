@@ -2,7 +2,9 @@
 A style guide for managing sane react components.
 
 # React.js
+
 ## Components
+
   - ###Organization
     ```javascript
     
@@ -34,6 +36,44 @@ A style guide for managing sane react components.
   - Don't change state in a child component without letting the parent component know. Deeply nested components are really hard and can be confusing at times if you use too much state and instead of using props data.
   - Class methods, should do one thing. (Single Responsibility Principle)
   - Use less state and more ```this.props``` in your render method.
+  - Learn about .bind(); because you're most likely going to be using a scoped ```this``` in a function inside of a function.
+
+    ```javascript
+    render: function(){
+      var editPositionState = function () {
+        // this.props is undefined
+        return this.props.stage.position === this.state.editPosition;  
+      };
+      var editPositionState = function () {
+        // this.props works!
+        return this.props.stage.position === this.state.editPosition;
+      }.bind(this);
+      // or you can do it the lame way and grab this.props
+      // before a function and assign it to a variable.
+    }
+    ```
+    - or if your using a ES6 transpiler like [Babeljs](https://babeljs.io/) use [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to keep the correct context.
+    ```javascript
+    render: function(){
+      var editPositionState = () => {
+        // this.props works!
+        return this.props.stage.position === this.state.editPosition;
+      }
+    }
+    ```
+
+  - Use multi-line jsx if a component has more than two properties.
+
+      ```javascript
+
+      <Component
+        propertyOne={...}
+        propertyTwo={...}
+        propertyThree={...}
+        …
+      />
+      ```
+
   - Don't get fancy with manipulating child DOM elements. Map over them and create child components instead.
     - *Good*
       ```javascript
@@ -81,43 +121,6 @@ A style guide for managing sane react components.
       ```
       - If it's a simple iteration over an array, render out each of the elements in an array inside jsx.
 
-  - Learn about .bind(); because you're most likely going to be using a scoped ```this``` in a function inside of a function.
-
-    ```javascript
-    render: function(){
-      var editPositionState = function () {
-        // this.props is undefined
-        return this.props.stage.position === this.state.editPosition;  
-      };
-      var editPositionState = function () {
-        // this.props works!
-        return this.props.stage.position === this.state.editPosition;
-      }.bind(this);
-      // or you can do it the lame way and grab this.props
-      // before a function and assign it to a variable.
-    }
-    ```
-    - or if your using a ES6 transpiler like [Babeljs](https://babeljs.io/) use [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to keep the correct context.
-    ```javascript
-    render: function(){
-      var editPositionState = () => {
-        // this.props works!
-        return this.props.stage.position === this.state.editPosition;
-      }
-    }
-    ```
-
-  - Use multi-line jsx if a component has more than two properties.
-
-      ```javascript
-
-      <Component
-        propertyOne={...}
-        propertyTwo={...}
-        propertyThree={...}
-        …
-      />
-      ```
 
 ## Mixins
   - Use more mixins.
