@@ -1,5 +1,5 @@
 # :recycle: React Style Guide :scroll:
-A style guide for managing sane react components.
+A best practices style guide for managing sane react components.
 
 # React.js
 
