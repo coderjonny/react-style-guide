@@ -30,6 +30,16 @@ A best practices style guide for managing sane react components.
 
     })
     ```
+    
+  - ### Props & State
+    - Don't pass props to state. 
+      ```javascript
+      
+        componentDidMount: function(){
+          this.setState({ people: this.props.people })
+          // BAD: usually a code smell if you're pass down props to state.
+        }
+      ```
   - ###Comments
     - Write a comment at the top of the component class if the component belongs to a parent component, especially if the parent component is passing in ```props```.
 
