@@ -143,7 +143,6 @@ A best practices style guide for managing sane react components.
 
 ## Mixins
   - Don't use mixins.. thinking about composable components instead. Mixins will get [deprecated](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750)
-  - I like to prefix mixin methods with ```_mxn_```, so in my components I write ```this._mxn_functionName``` and I know it's from a mixin.
 
 ## CSS styles in your components
   - Useful when you're creating dynamic css styles for your components and it can be fun!
