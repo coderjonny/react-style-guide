@@ -142,7 +142,7 @@ A best practices style guide for managing sane react components.
 
 
 ## Mixins
-  - Once you see duplicated functionality in your components, use a Mixin. DRY.
+  - Don't use mixins.. thinking about composable components instead. Mixins will get [deprecated](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750)
   - I like to prefix mixin methods with ```_mxn_```, so in my components I write ```this._mxn_functionName``` and I know it's from a mixin.
 
 ## CSS styles in your components
