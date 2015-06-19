@@ -40,13 +40,15 @@ A best practices style guide for managing sane react components.
           // BAD: usually a code smell if you're pass down props to state.
         }
       ```
-    - Note: setting state effects entire state
+    - Note: replaceState effects entire state, setState merges with the current state.
       ```javascript
       
          this.setState({ isEditing: true });
          ... (later) ... 
-         this.setState({ isActive: true }); // isEditing no longer part of state
+         this.replaceState({ isActive: true }); // isEditing no longer part of current state
+         this.setState({ isActive: true }); // isActive merges into current state
       ```
+
   - ###Comments
     - Write a comment at the top of the component class if the component belongs to a parent component, especially if the parent component is passing in ```props```.
 
