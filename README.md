@@ -171,6 +171,8 @@ A best practices style guide for managing sane react components.
   - react-rails gem (if you're using rails)
   - an editor that supports vertical split screens for managing hiearchy and thinking about one-way data flow.
 
+## Other best practices guides
+[airbnb's react/jsx style guide](https://github.com/airbnb/javascript/tree/master/react)
 
 # React Native
   - TBA
