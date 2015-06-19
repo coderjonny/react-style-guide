@@ -167,7 +167,7 @@ A best practices style guide for managing sane react components.
   - Jest best practices...
 
 ## Tools
-  - React dev console chrome extension
+  - React dev console [chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
   - react-rails gem (if you're using rails)
   - an editor that supports vertical split screens for managing hiearchy and thinking about one-way data flow.
 
