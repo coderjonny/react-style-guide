@@ -8,8 +8,9 @@ A best practices style guide for managing sane react components.
   - ###Organization
     ```javascript
     
-    //<PeopleList> --> <Person>
-    
+    //<PeopleList>
+    //    |
+    //    V
     var Person = React.createClass({
 
         propTypes: {},
@@ -96,8 +97,8 @@ A best practices style guide for managing sane react components.
       ```
 
   - Don't get fancy with manipulating child DOM elements. Map over them and create child components instead.
-    - *Good*
       ```javascript
+      // Good
       render: function() {
         var people = this.props.people.map(function (person) {
           if (person){
@@ -116,10 +117,8 @@ A best practices style guide for managing sane react components.
           </ul>
         )
       }
-      ```
-
-    - *Better*
-      ```javascript
+      
+      //Better
       render: function() {
   
         return (
