@@ -12,22 +12,29 @@ A best practices style guide for managing sane react components.
     //    |
     //    V
     var Person = React.createClass({
-
+        
+        // Defaults and initialization properties at the top
+        
         propTypes: {},
-        mixins: [],
-
         getInitialState: function() {},
         getDefaultProps: function() {},
 
+        // Life-cycle methods here
         componentWillMount: function() {},
         componentWillReceiveProps: function() {},
         componentWillUnmount: function() {},
 
-        someMethod: function() {},
+        // Instance methods (any application logic should be refactored out into the Store)
+        someHelperMethod: function() {},
         someOtherInstanceMethod: function() {},
         dynamicCss: function() {},
 
-        render : function() {}
+        // The most important method in a react class. Make sure to keep it simple as possible.
+        render : function() {},
+        
+        // Actions handlers down here prefixed with _
+        
+        _addPoints: function() {}
 
     })
     ```
