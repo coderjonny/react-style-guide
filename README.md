@@ -14,7 +14,6 @@ A best practices style guide for managing sane react components.
     var Person = React.createClass({
         
         // Defaults and initialization properties at the top
-        
         propTypes: {},
         getInitialState: function() {},
         getDefaultProps: function() {},
@@ -33,7 +32,6 @@ A best practices style guide for managing sane react components.
         render : function() {},
         
         // Actions handlers down here prefixed with _
-        
         _addPoints: function() {}
 
     })
