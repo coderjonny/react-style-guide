@@ -20,7 +20,7 @@ A best practices style guide for managing sane react components.
     var DefaultRoute = Router.DefaultRoute;
     var NotFoundRoute = Router.NotFoundRoute;
     
-    //<PeopleList>
+    //<PeopleList />
     //    |
     //    V
     var Person = React.createClass({
