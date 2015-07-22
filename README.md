@@ -8,7 +8,7 @@ A best practices style guide for managing sane react components.
   - ###Organization
     ```javascript
     // ES6
-    // Use es6 import syntax.
+    // Use es6 import syntax and destructor if you need to.
     import React from 'react';
     import {Route, DefaultRoute, NotFoundRoute} from 'react-router';
     
