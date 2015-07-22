@@ -7,6 +7,17 @@ A best practices style guide for managing sane react components.
 
   - ###Organization
     ```javascript
+    // ES6
+    import React from 'react';
+    import {Route, DefaultRoute, NotFoundRoute} from 'react-router';
+    
+    // ES5
+    var React = require('react');
+    var Router = require('react-router');
+
+    var Route = Router.Route;
+    var DefaultRoute = Router.DefaultRoute;
+    var NotFoundRoute = Router.NotFoundRoute;
     
     //<PeopleList>
     //    |
