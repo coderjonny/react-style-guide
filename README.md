@@ -43,7 +43,7 @@ A best practices style guide for managing sane react components.
         // The most important method in a react class. Make sure to keep it simple as possible.
         render : function() {},
         
-        // Actions handlers down here prefixed with _
+        // Actions handlers underneath render() prefixed with _
         _addPoints: function() {}
 
     })
