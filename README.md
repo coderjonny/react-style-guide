@@ -7,7 +7,7 @@ A best practices style guide for managing sane react components.
   - Have only one component per file using '.js' file extension. no need to do '.jsx'
 
 ## Organization
-    ```javascript
+  ```javascript
     // ES6 ... best practice
     // Use es6 import syntax and destructor if you need to.
     import React from 'react';
@@ -49,8 +49,8 @@ A best practices style guide for managing sane react components.
         _addPoints: function() {}
 
     })
-    ```
-    
+  ```
+  
   - ### Props & State
     - Don't pass props to state. 
       ```javascript
@@ -67,7 +67,7 @@ A best practices style guide for managing sane react components.
          ... (later) ... 
          this.replaceState({ isActive: true }); // isEditing no longer part of current state
          this.setState({ isActive: true }); // isActive merges into current state
-      ```
+    ```
     - Try to only use application data with ```Props``` not ```State```.
 
   - ###Comments
