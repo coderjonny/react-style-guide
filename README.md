@@ -6,6 +6,7 @@ This guide assumes you are using Webpack + Babel + es6 syntax, but the guide's s
 
 ## Components
   - Have only one component per file using '.js' file extension. no need to do '.jsx'
+  - Use PascalCase for naming React components and files.
 
 ## Organization
   ```javascript
