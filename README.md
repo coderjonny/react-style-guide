@@ -4,15 +4,14 @@ A best practices style guide for managing sane react components.
 # React.js
 
 ## Components
-
-  - ###Organization
   - Have only one component per file using '.js' file extension. no need to do '.jsx'
 
+## Organization
     ```javascript
     // ES6 ... best practice
     // Use es6 import syntax and destructor if you need to.
     import React from 'react';
-    import AwesomeComponent from './AwesomeComponent'; //no need to put .js if it's a .js file. (use .js over .jsx) 
+    import AwesomeComponent from './AwesomeComponent'; //no need to put .js if it's a .js file. (use .js over .jsx for webpack/babel) 
     import {Route, DefaultRoute, NotFoundRoute} from 'react-router';
     
     // ES5 ... bad practice
