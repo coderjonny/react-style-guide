@@ -1,8 +1,6 @@
 # :recycle: React Style Guide :scroll:
 A best practices style guide for managing sane react components.
-This guide assumes you are using Webpack + Babel + es6 syntax, but the guide's syntax and conventions should be able to be generally applied if you aren't.
-
-I highly encourage you to also do so for building react components.
+This guide assumes you are using Webpack + Babel + es6 syntax, but the guide's syntax and conventions should be able to be generally applied if you aren't. I highly encourage you to use some build system + es6 for building react components.
 
 # React.js
 
