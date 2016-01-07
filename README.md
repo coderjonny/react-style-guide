@@ -6,16 +6,19 @@ A best practices style guide for managing sane react components.
 ## Components
 
   - ###Organization
+  - Have only one component per file using '.js' file extension. no need to do '.jsx'
+
     ```javascript
-    // ES6
+    // ES6 ... best practice
     // Use es6 import syntax and destructor if you need to.
     import React from 'react';
+    import AwesomeComponent from './AwesomeComponent'; //no need to put .js if it's a .js file. (use .js over .jsx) 
     import {Route, DefaultRoute, NotFoundRoute} from 'react-router';
     
-    // ES5
+    // ES5 ... bad practice
     var React = require('react');
     var Router = require('react-router');
-
+    
     var Route = Router.Route;
     var DefaultRoute = Router.DefaultRoute;
     var NotFoundRoute = Router.NotFoundRoute;
@@ -66,6 +69,7 @@ A best practices style guide for managing sane react components.
          this.replaceState({ isActive: true }); // isEditing no longer part of current state
          this.setState({ isActive: true }); // isActive merges into current state
       ```
+    - Try to only use application data with ```Props``` not ```State```.
 
   - ###Comments
     - Write a comment at the top of the component class if the component belongs to a parent component, especially if the parent component is passing in ```props```.
